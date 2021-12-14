@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.Views.Register">
+
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+        
+            <Image Grid.Row="1" Source="logos.png" WidthRequest="100" HeightRequest="100" Margin="10,30,10,1"></Image>
+            <StackLayout Grid.Row="1" Margin="10,10,10,10" Padding="30.320">
+                <Label Text="register" FontAttributes="Bold"></Label>
+                <Entry Text="{Binding GmailTxt}" Placeholder="Gmail" PlaceholderColor="Black"></Entry>
+                <Entry Text="{Binding PasswordTxt}" Placeholder="Password" PlaceholderColor="Black" IsPassword="True"></Entry>
+                <Button Command="{Binding RegisterCommand}" Text="Complete" TextColor="White" BackgroundColor="Black" BorderColor="White" ></Button>
+            </StackLayout>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

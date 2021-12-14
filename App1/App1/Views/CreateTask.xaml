@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.Views.CreateTask"
+             Title="create a task">
+    <ContentPage.Content>
+        <StackLayout Padding="15">
+            <Label Text="task" TextColor="{StaticResource Dark}"></Label>
+            <Entry Text="{Binding TextTxt}" Placeholder="name" PlaceholderColor="{StaticResource Dark}"></Entry>
+            <Editor Text="{Binding DescriptionTxt}" Placeholder="description" PlaceholderColor="{StaticResource Dark}"  HeightRequest="120"></Editor>
+            <Button Command="{Binding TaskRegisterCommand}" Text="create task"> </Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

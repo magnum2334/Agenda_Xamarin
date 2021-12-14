@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.Views.Loginxamarin">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Image Grid.Row="1" Source="logos.PNG" WidthRequest="100" HeightRequest="100" Margin="10,30,10,1"></Image>
+            <StackLayout Grid.Row="1" Margin="10,190,10,10" Padding="30.320">
+                <Entry Placeholder="Email" PlaceholderColor="{StaticResource Dark}" Text="{Binding GmailTxt , Mode=TwoWay}"></Entry>
+                <Entry Placeholder="Password" PlaceholderColor="{StaticResource Dark}" Text="{Binding PasswordTxt , Mode=TwoWay}" IsPassword="True"></Entry>
+                <Button Command="{Binding LoginCommand}" Text="Login" TextColor="White" BackgroundColor="{StaticResource Dark}" BorderColor="{StaticResource Success}" ></Button>
+                
+                <StackLayout  Orientation="Horizontal">
+                    <Button TextColor="{StaticResource Dark}" Text="Register" HorizontalOptions="Center" FontAttributes="Bold" Clicked="Button_Clicked" BorderWidth="30"></Button>
+                </StackLayout>
+            </StackLayout>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
